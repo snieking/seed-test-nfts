@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const amount = 100;
+const amount = 30;
 
 function randomBoolean() {
   return Math.random() > 0.5;
