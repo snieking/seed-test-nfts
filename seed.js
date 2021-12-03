@@ -1,0 +1,38 @@
+const fs = require('fs');
+
+const amount = 10_000;
+
+function randomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function randomBoolean() {
+  return Math.random() > 0.5;
+}
+
+function writeJsonFile(filename, data) {
+  fs.writeFileSync(filename, JSON.stringify(data, null, 2));
+}
+
+function main() {
+  const seeds = [];
+  for (var i = 0; i < amount; i++) {
+    seeds.push({
+      id: i,
+      name: randomBoolean()
+        ? 'Alice Mysterious Seed'
+        : 'Chromia Mysterious Seed',
+    });
+  }
+
+  const json = {
+    seeds,
+    profile: {
+      name: 'typicode',
+    },
+  };
+
+  writeJsonFile('nfts.json', json);
+}
+
+main();
