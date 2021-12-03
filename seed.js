@@ -32,7 +32,7 @@ function main() {
     },
   };
 
-  writeJsonFile('nfts.json', json);
+  writeJsonFile('db.json', json);
 }
 
 main();
