@@ -30,7 +30,7 @@ function main() {
     },
   };
 
-  writeJsonFile('db.json', json);
+  writeJsonFile('../db.json', json);
 }
 
 main();
