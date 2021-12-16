@@ -1,8 +1,8 @@
 pragma solidity ^0.8.10;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 
-contract MysteriousSeeds is ERC721 {
+contract MysteriousSeeds is ERC721Enumerable {
     uint256 public tokenCounter;
     mapping(uint256 => string) private _tokenURIs;
 
